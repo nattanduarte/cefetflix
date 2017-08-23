@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CEFETFlix</title>
+	<script src="./js/filmes.js"></script>
+	<script src="./js/jquery-min.js"></script>
+	<script>
+		 	
+	$(function(){
+		$.each(filmes, function(indice,filmes){
+			var $ul= $("<ul />");
+			var $ol= $("<ol />");
+			//$.each(filmes.titulo, function(i,obj){
+			
+			//	$ul.append($("<li />").text(obj));			
+			//});
+			//$.each(filmes.resumo, function(i,obj){
+			//	$ol.append($("<li />").text(obj));
+			//});
+			$(".catalogo")
+				.append($("<div />")
+					.addClass("filme")
+					.append($("<h1 />")
+						.text(filmes.titulo)
+					)
+					.append($("<img />")
+						.attr("src", filmes.figura)
+					)
+					.append($("<p />")
+						.text(filmes.resumo)
+
+					)
+				)
+
+
+		});
+
+	});
+
+
+	</script>
+
+</head>
+<body>
+	
+	<div class="catalogo">	
+	</div>
+
+
+
+</body>
+</html>
