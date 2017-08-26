@@ -1,0 +1,46 @@
+
+
+#myCarousel img{
+	width: 800px;
+	text-align: center;
+	position: relative;
+	left:300px;
+	border-radius: 5px;
+	border:outset rgba(0,0,0,0.01);
+}
+
+.filme{
+	border: 1px solid black;
+	width: 30%;
+	float:left;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+
+}
+
+.filme:nth-child(10){
+	clear: left;
+}
+
+.filme:nth-child(13){
+	clear: left;
+}
+
+.banner{
+	position: relative;
+	left:40px;
+	width: 300px;
+}
+
+.resumo{
+	width: 300px;
+	text-align: justify;
+	position: relative;
+	top: 7px;
+	left: 40px;
+}
+
+.titulo{
+	text-align: center;
+}
