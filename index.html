@@ -5,23 +5,59 @@
 	<script src="./js/filmes.js"></script>
 	<script src="./js/jquery-min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="./css/decoracao.css">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 	<script>
 		 	
 	$(function(){
-		$.each(filmes, function(indice,filmes){
+
+		$.each(filmes, function(indice, filmes){
+
 			var $ul= $("<ul />");
 			var $ol= $("<ol />");
-			//$.each(filmes.titulo, function(i,obj){
-			
-			//	$ul.append($("<li />").text(obj));			
-			//});
+			var $div= $("<div />");
+			var $divOpiniao = $("<div/>");
+
 			//$.each(filmes.resumo, function(i,obj){
 			//	$ol.append($("<li />").text(obj));
 			//});
+
+			 if (filmes.classificacao==0) {
+					var classificacao = "./img/livre.png";
+			};
+			if (filmes.classificacao==10) {
+						var classificacao = "./img/10.png";
+			};
+			if (filmes.classificacao==12) {
+						var classificacao = "./img/12.png";
+			};
+			if (filmes.classificacao==14) {
+						var classificacao = "./img/14.png";
+			};
+			if (filmes.classificacao==16) {
+						var classificacao = "./img/16.png";
+			};
+			if (filmes.classificacao==18) {
+						var classificacao = "./img/18.png";
+			};
+
+			$.each(filmes.opinioes, function(i, obj){
+				$divOpiniao
+					.append($("<p/>")
+						.addClass("opinioes-rating-p")
+						.text(obj.rating)
+					)
+					.append($("<h1/>")
+						.addClass("opinioes-descricao")
+						.text(obj.descricao)
+					)			
+			});
+
 			$(".catalogo")
 				.append($("<div />")
 					.addClass("filme")
@@ -42,40 +78,47 @@
 							
 							.text(filmes.generos)
 						)
-					)
-					.append($("<ul />")
-						.append($("<li />")
-					
+					)*/
+					.append($("<p />")
+							.addClass("elenco")
 							.text(filmes.elenco)
-						)
 					)
-					.append($("<ul />")
+
+					/*.append($("<ul />")
 						.append($("<li />")
 					
 							.text(filmes.titulosSemelhantes)
 						)
 					)*/
 
-					.append($("<p />")
-					
-						.text(filmes.classificacao)
-						
+					.append($("<ul />")
+						.append("<li />")
+							.addClass("generos")
+							.text(filmes.generos)
 					)
+
+					.append($("<img />")
+						.addClass("classificacao")
+						.attr("src", classificacao )
+					)
+					.append($("<div/>")
+						.append($divOpiniao)
+					)
+
+			)
 					
-				)
-				
-
-
+					
+			
+					
 		});
-
 	});
-
-
-	</script>
+</script>
 
 </head>
 <body>
-	<h1>Em alta</h1>
+
+	
+	<h1>Destaques</h1>
 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
  		 
 	  	<ol class="carousel-indicators">
@@ -107,8 +150,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+	
 	<div class="catalogo">	
-	</div>
+</div>
 
 
 

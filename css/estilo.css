@@ -9,6 +9,13 @@
 	border:outset rgba(0,0,0,0.01);
 }
 
+.catalogo{
+
+	width: 80%;
+	margin-left:10%;
+
+}
+
 .filme{
 	border: 1px solid black;
 	width: 30%;
@@ -16,20 +23,29 @@
 	margin-left: 15px;
 	margin-right: 15px;
 	margin-top: 15px;
+	position: relative;
 
+}
+
+.filme:nth-child(4){
+	clear: left;
+}
+
+.filme:nth-child(7){
+	clear: both;
 }
 
 .filme:nth-child(10){
-	clear: left;
+	clear: both;
 }
 
 .filme:nth-child(13){
-	clear: left;
+	clear: both;
 }
 
 .banner{
 	position: relative;
-	left:40px;
+	left:10px;
 	width: 300px;
 }
 
@@ -37,10 +53,42 @@
 	width: 300px;
 	text-align: justify;
 	position: relative;
-	top: 7px;
-	left: 40px;
+	top: 5px;
+	left: 10px;
 }
 
 .titulo{
 	text-align: center;
 }
+.classificacao{
+
+	float: right;
+	margin-right: 20px;
+}
+
+.elenco{
+
+	position: relative;
+	top: 15px;
+	left: 10px;
+	padding: 0 5px;
+}
+
+.generos{
+
+	font-size: 1em;
+	position: relative;
+	top: 10px;
+}
+
+.classificacao{
+	width: 35px;
+	position: relative;
+	bottom:5px;
+	margin-top:5px;
+}
+
+.opinioes-descricao{
+	font-size: 1em;
+}
+
