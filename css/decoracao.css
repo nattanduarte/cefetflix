@@ -1,0 +1,18 @@
+body{
+	
+	background-color: #fff;
+
+}
+h1{
+	color: #545f7a;
+}
+
+.filme:hover{
+	background-color: rgba(205,205,205,0.5);
+	border-radius: 15px;
+	border-bottom: 2px solid #007FFF;
+}
+
+.header{
+	background-color: rgba(205,205,205,0.5);
+}
